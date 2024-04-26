@@ -1,80 +1,84 @@
 .cover {
-  background-image: url(../../images/__background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  font-family: "Inter", sans-serif;
+  width: 1184px;
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 1184px;
-  height: 740px;
-  margin-top: 92px;
-  gap: 32px;
+  transition: 0.5s ease;
+  filter: brightness(70%);
 }
-
-.cover::before {
-  content: "";
-  display: block;
+.cover__overlay{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+.cover:hover .cover__overlay{
+  background-color: rgba(42, 44, 47, 0.8);
+
 }
 
-.cover:hover::before {
-  background-color: rgba(0, 0, 0, 0.5);
+.cover__background {
+  width: 100%;
 }
 
+.cover__info {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
 .cover__title {
   font-size: 72px;
   font-weight: 900;
   line-height: 76px;
-  text-align: center;
-  max-width: 656px;
-  position: relative;
-  margin: 0px;
+  margin-bottom: 32px;
 }
-
 .cover__subtitle {
   font-size: 18px;
-  font-weight: 400;
   line-height: 22px;
-  text-align: center;
-  position: relative;
-  max-width: 280px;
-  margin: 0px;
+  font-weight: 400;
 }
 
 .cover__button {
+  width: 198px;
+  height: 48px;
+  padding: 13px 20px;
+  margin-top: 32px;
+  background-color: #0278fe;
+  color: #fff;
   font-size: 18px;
   font-weight: 600;
-  font-style: normal;
-  line-height: 22px;
-  color: rgba(255, 255, 255, 1);
-  text-decoration: none;
-  background-color: rgba(2, 120, 254, 1);
-  padding: 13px 20px;
-  border-radius: 4px;
-  position: relative;
+  line-height: 21.78px;
+  border: 0;
   cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
 }
-
 .cover__button:hover {
-  background-color: rgba(0, 99, 210, 1);
-  transform: scale(1.05);
-  transition: background-color 0.4s ease;
+  background-color: #0063d2;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .cover {
-    max-height: 254px;
-    max-width: 321.26px;
+    width: 768px;
+    height: 746px;
+  }
+  .cover__background {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cover {
+    width: 321.26px;
+    height: 254px;
   }
   .cover__title {
-    max-width: 288px;
     font-size: 32px;
     line-height: 35px;
   }
@@ -82,11 +86,8 @@
     font-size: 14px;
     line-height: 16px;
   }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .cover {
-    max-width: 768px;
-    max-height: 746px;
+  .cover__background {
+    height: 100%;
+    width: 100%;
   }
 }
