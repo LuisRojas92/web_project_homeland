@@ -1,5 +1,5 @@
-
 Enlace a GitHub Pages
+
 https://luisrojas92.github.io/web_project_homeland/
 
 De Patria a Patria.
@@ -18,6 +18,4 @@ Se trabajo con:
 -HTML y CSS.
 -Organización de contenido
 -Donde se implemento BEM, Flexbox y Gridbox.
--Uso de Media Query : 1280px 768px y 320px. 
-
-
+-Uso de Media Query : 1280px 768px y 320px.
